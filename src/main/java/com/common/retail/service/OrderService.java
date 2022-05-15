@@ -54,37 +54,37 @@ public class OrderService {
 	    	Order outOrder = null;
 
 	        if (order.getOrdername() != null && order.getOrdertype() != null) {
-	        	Order existingProduct = repository.findById(order.getId()).orElse(null);
-	            existingProduct.setOrdertype(order.getOrdertype());
-	            existingProduct.setOrdername(order.getOrdername());
-	            outOrder = repository.save(existingProduct);
+	        	Order existingOrder = repository.findById(order.getId()).orElse(null);
+	        	existingOrder.setOrdertype(order.getOrdertype());
+	        	existingOrder.setOrdername(order.getOrdername());
+	            outOrder = repository.save(existingOrder);
 	        } else if (order.getOrdername() != null && order.getOrdertype() != null) {
-	        	Order existingProduct = repository.findById(order.getId()).orElse(null);
-	            existingProduct.setOrdername(order.getOrdername());
-	            existingProduct.setOrdertype(order.getOrdertype());
-	            outOrder = repository.save(existingProduct);
+	        	Order existingOrder = repository.findById(order.getId()).orElse(null);
+	        	existingOrder.setOrdername(order.getOrdername());
+	        	existingOrder.setOrdertype(order.getOrdertype());
+	            outOrder = repository.save(existingOrder);
 	        }else if (order.getOrdernumber() != 0 && order.getOrdertype() != null) {
-	        	Order existingProduct = repository.findById(order.getId()).orElse(null);
-	            existingProduct.setOrdernumber(order.getOrdernumber());
-	            existingProduct.setOrdertype(order.getOrdertype());
-	            outOrder = repository.save(existingProduct);
+	        	Order existingOrder = repository.findById(order.getId()).orElse(null);
+	        	existingOrder.setOrdernumber(order.getOrdernumber());
+	        	existingOrder.setOrdertype(order.getOrdertype());
+	            outOrder = repository.save(existingOrder);
 	        } else if (order.getOrdertype() != null) {
-	        	Order existingProduct = repository.findById(order.getId()).orElse(null);
-	            existingProduct.setOrdertype(order.getOrdertype());
-	            outOrder = repository.save(existingProduct);
+	        	Order existingOrder = repository.findById(order.getId()).orElse(null);
+	        	existingOrder.setOrdertype(order.getOrdertype());
+	            outOrder = repository.save(existingOrder);
 	        } else if (order.getOrdername() != null) {
-	        	Order existingProduct = repository.findById(order.getId()).orElse(null);
-	            existingProduct.setOrdername(order.getOrdername());
-	            outOrder = repository.save(existingProduct);
+	        	Order existingOrder = repository.findById(order.getId()).orElse(null);
+	        	existingOrder.setOrdername(order.getOrdername());
+	            outOrder = repository.save(existingOrder);
 	        } else if (order.getOrdertype() != null && order.getOrdernumber() != 0.0) {
-	        	Order existingProduct = repository.findById(order.getId()).orElse(null);
-	            existingProduct.setOrdernumber(order.getOrdernumber());
-	            existingProduct.setOrdertype(order.getOrdertype());
-	            outOrder = repository.save(existingProduct);
+	        	Order existingOrder = repository.findById(order.getId()).orElse(null);
+	        	existingOrder.setOrdernumber(order.getOrdernumber());
+	        	existingOrder.setOrdertype(order.getOrdertype());
+	            outOrder = repository.save(existingOrder);
 	        }  else if (order.getOrdernumber() != 0) {
-	        	Order existingProduct = repository.findById(order.getId()).orElse(null);
-	            existingProduct.setOrdernumber(order.getOrdernumber());  
-	            outOrder = repository.save(existingProduct);
+	        	Order existingOrder = repository.findById(order.getId()).orElse(null);
+	        	existingOrder.setOrdernumber(order.getOrdernumber());  
+	            outOrder = repository.save(existingOrder);
 	        } 
 	        return outOrder;
 	    }
