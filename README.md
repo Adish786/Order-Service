@@ -103,12 +103,11 @@ Content: paginated list
 ### Update order resource
 
 ```
-PUT http://localhost:8004/update
+PUT http://localhost:8004/update/1
 Accept: application/json
 Content-Type: application/json
 
 {
-    "id": 12,
      "ordername" : "Mobile",
     "ordertype" : "Online",
    "ordernumber" : 10
